@@ -45,7 +45,7 @@ client.on('message', function (topic, message) {
 
   switch(topic){
 	case "hermes/hotword/default/detected":
-		player.play('bip.wav', function(err){
+		player.play(__dirname + '/bip.wav', function(err){
 		  if (err) throw err
 		})
 		break;
